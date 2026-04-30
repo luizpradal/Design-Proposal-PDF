@@ -288,17 +288,19 @@ html, body {
 /* ── SECTION HEADER ── */
 .section-head {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 14px;
-  padding: 28px 40px 0;
+  padding: 32px 40px 8px;
+  overflow: visible;
 }
 .section-num {
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 900;
   color: var(--orange);
-  line-height: 1;
+  line-height: 1.2;
   flex-shrink: 0;
+  overflow: visible;
 }
 .section-title {
   font-family: var(--font-body);
@@ -346,7 +348,7 @@ html, body {
 .item-name-col { padding-left: 12px !important; }
 .item-name-input {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 800;
   text-transform: uppercase;
   color: var(--ink);
@@ -356,6 +358,9 @@ html, body {
   outline: none;
   width: 100%;
   display: block;
+  line-height: 1.3;
+  padding: 2px 0;
+  overflow: visible;
 }
 .item-name-input::placeholder { color: var(--faint); }
 .item-note-input {
@@ -716,7 +721,7 @@ html, body {
       <tr>
         <td class="item-num">02</td>
         <td class="item-name-col">
-          <input type="text" class="item-name-input" value="Signature Design Service">
+          <input type="text" class="item-name-input" value="Signature Design">
           <input type="text" class="item-note-input" placeholder="Description (optional)">
         </td>
         <td style="text-align:right;padding-right:40px;">

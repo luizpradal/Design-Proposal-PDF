@@ -601,21 +601,26 @@ html, body {
 }
 
 /* Center alignment overrides */
-.field-input, .item-name-input, .item-note-input, .item-price-input,
-.total-value-input, .notes-ta { text-align: center; }
-.item-price-input { text-align: center; }
-.line-items thead th:last-child { text-align: center; }
-.line-items tbody tr td { text-align: center; }
-.client-section, .two-col, .sig-row { text-align: center; }
-.bottom-left, .bottom-right { text-align: center; }
-.bottom-bar { justify-content: center; gap: 24px; }
-.top-nav, .top-num { text-align: center; }
+/* Hero section */
+.hero { text-align: center; }
+.hero-eyebrow { text-align: center; }
+.intro-text { text-align: center; margin: 0 auto; }
+/* Nav bar */
 .top-bar { justify-content: center; gap: 24px; }
-.intro-bar { text-align: center; }
-.section-head { justify-content: center; }
-.total-strip { justify-content: center; gap: 32px; }
-.sig-cell, .col-left, .col-right, .stat-block, .client-field { text-align: center; }
+/* Add line */
 .add-line-wrap { text-align: center; }
+/* Total strip */
+.total-strip { justify-content: center; gap: 32px; }
+/* Footer */
+.bottom-bar { justify-content: center; gap: 24px; }
+.bottom-left, .bottom-right { text-align: center; }
+/* Keep grid layouts intact — only center text inside cells */
+.client-field { text-align: center; }
+.sig-cell { text-align: center; }
+.col-left, .col-right { text-align: center; }
+/* All editable fields — centre aligned */
+.field-input, .item-name-input, .item-note-input,
+.item-price-input, .total-value-input, .notes-ta { text-align: center; }
 </style>
 </head>
 <body>
@@ -757,13 +762,6 @@ html, body {
     <div class="col-right">
       <div class="col-heading">Validity</div>
       <div class="pull-quote">This quote is valid for 30 days from the date of issue.</div>
-      <div style="margin-top:16px;">
-        <div class="col-heading" style="margin-bottom:8px;">Contact</div>
-        <div style="font-family:var(--font-body);font-size:12px;color:var(--muted);line-height:1.8;">
-          noregrets.tattoo<br>
-          ben@noregrets.tattoo
-        </div>
-      </div>
     </div>
   </div>
 

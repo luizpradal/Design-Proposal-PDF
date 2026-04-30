@@ -584,10 +584,39 @@ html, body {
 
 /* ── PRINT ── */
 @media print {
-  body { background: var(--cream); }
-  .toolbar { display: none; }
-  .sheet { margin: 0; max-width: 100%; }
-  .add-line-wrap { display: none; }
+  body { background: var(--cream); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .toolbar { display: none !important; }
+  .add-line-wrap { display: none !important; }
+  .sheet { margin: 0; max-width: 100%; box-shadow: none; border: none; }
+
+  /* Force grids to maintain their column structure */
+  .client-section {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .two-col {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .sig-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .stats-row {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  /* Prevent grid cells breaking across pages */
+  .client-field, .sig-cell, .col-left, .col-right, .stat-block {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Keep the whole sheet on one page if possible */
+  .sheet { page-break-inside: avoid; }
+
   @page { margin: 0; size: A4; }
 }
 @media (max-width: 600px) {

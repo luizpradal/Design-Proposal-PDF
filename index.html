@@ -587,10 +587,24 @@ html, body {
 
 /* ── PRINT ── */
 @media print {
-  body { background: var(--cream); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body {
+    background: var(--cream) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    min-height: 297mm;
+  }
   .toolbar { display: none !important; }
   .add-line-wrap { display: none !important; }
-  .sheet { margin: 0; max-width: 100%; box-shadow: none; border: none; }
+  .sheet {
+    margin: 0;
+    max-width: 100%;
+    box-shadow: none;
+    border: none;
+    background: var(--cream) !important;
+    min-height: 297mm;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 
   /* Prevent cells breaking across pages */
   .client-field, .sig-cell, .col-left, .col-right {

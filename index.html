@@ -224,7 +224,7 @@ html, body {
 }
 .hero-headline {
   font-family: var(--font-display);
-  font-size: clamp(52px, 8vw, 96px);
+  font-size: clamp(36px, 5vw, 64px);
   font-weight: 900;
   line-height: .95;
   text-transform: uppercase;
@@ -621,8 +621,11 @@ html, body {
 <body>
 
 <div class="toolbar">
-  <p>Click any field to edit &nbsp;&middot;&nbsp; Cmd+P / Ctrl+P to export PDF</p>
-  <button class="btn-print" onclick="window.print()">Export PDF</button>
+  <p>Click any field to edit</p>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <span style="font-family:var(--mono);font-size:10px;color:#999;letter-spacing:.04em;">PDF &rarr; Save as PDF</span>
+    <button class="btn-print" onclick="window.print()">Save as PDF</button>
+  </div>
 </div>
 
 <div class="sheet">
@@ -655,7 +658,7 @@ html, body {
 
   <!-- INTRO -->
   <div class="intro-bar">
-    <div class="intro-text">A bespoke tattoo design experience — crafted to your vision, presented with precision. All prices are estimates subject to final design confirmation.</div>
+    <div class="intro-text">A bespoke tattoo design experience — crafted to your vision, presented with precision. All prices are estimates subject to final design confirmation. No doubts, No Regrets.</div>
   </div>
 
   <!-- CLIENT DETAILS -->
